@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOOB NATION - Free Fire Top-Up</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .panel {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px 25px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    h2 {
+      color: #00ffcc;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input, select {
+      background: #1c1c1c;
+      color: white;
+    }
+
+    button {
+      background: #00c853;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00b347;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="panel">
+    <h2>NOOB NATION 🔥</h2>
+    <p>Free Fire Diamond Top-Up</p>
+    <p>Developer SHORIF</p>
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <input id="uid" type="text" placeholder="Enter Free Fire UID" required>
+
+      <select id="package" required>
+        <option value="">🎁 ডায়মন্ড প্যাকেজ সিলেক্ট করুন</option>
+        <option value="25 Diamond (25 Taka)">25 Diamond - 25 Taka</option>
+        <option value="50 Diamond (40 Taka)">50 Diamond - 40 Taka</option>
+        <option value="240 Diamond (160 Taka)">240 Diamond - 160 Taka</option>
+        <option value="610 Diamond (400 Taka)">610 Diamond - 400 Taka</option>
+        <option value="1240 Diamond (790 Taka)">1240 Diamond - 790 Taka</option>
+        <option value="2530 Diamond (1640 Taka)">2530 Diamond - 1640 Taka</option>
+        <option value="Weekly (160 Taka)">Weekly - 160 Taka</option>
+        <option value="Monthly (770 Taka)">Monthly - 770 Taka</option>
+        <option value="Level Up Pass (160 Taka)">Level Up Pass - 160 Taka</option>
+      </select>
+
+      <select id="payment" required>
+        <option value="">💳 Select Payment Method</option>
+        <option value="Bkash">Bkash</option>
+        <option value="Nagad">Nagad</option>
+      </select>
+
+      <button type="submit">📲 Order via WhatsApp</button>
+    </form>
+  </div>
+
+  <script>
+    function sendToWhatsApp() {
+      var uid = document.getElementById("uid").value;
+      var pack = document.getElementById("package").value;
+      var pay = document.getElementById("payment").value;
+
+      var phone = "8801707405778";
+      var message = `🔥 Free Fire Top-Up Request 🔥\n\n👤 UID: ${uid}\n💎 Package: ${pack}\n💰 Payment Method: ${pay}`;
+
+      var url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
