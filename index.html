@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NOOB NATION - Free Fire Top-Up</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
@@ -33,44 +33,43 @@
     }
 
     h2 {
-      background: linear-gradient(90deg, #00ffd5, #00bcd4, #00ffd5);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 26px;
-      font-weight: bold;
+      color: #00ffcc;
+      margin-bottom: 5px;
     }
 
     p {
       font-size: 14px;
       color: #ccc;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    input, select, button {
+    input,
+    select,
+    button {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border-radius: 10px;
+      border-radius: 8px;
       border: none;
       font-size: 16px;
     }
 
-    input, select {
-      background: rgba(255, 255, 255, 0.1);
+    input,
+    select {
+      background: #1c1c1c;
       color: white;
     }
 
     button {
-      background: linear-gradient(to right, #00c853, #00e676);
+      background: #00c853;
       color: white;
       font-weight: bold;
       cursor: pointer;
-      transition: transform 0.3s ease;
+      transition: 0.3s;
     }
 
     button:hover {
-      transform: scale(1.05);
+      background: #00b347;
     }
 
     .social-buttons {
@@ -92,8 +91,8 @@
       transition: 0.3s ease;
     }
 
-    .whatsapp {
-      background: #25d366;
+    .discord {
+      background: #5865f2;
     }
 
     .facebook {
@@ -110,14 +109,20 @@
   </style>
 </head>
 <body>
-
   <div class="panel">
-    <h2>NOOB NATION 🔥</h2>
+    <h2>NOOB NATION </h2>
     <p>ফ্রি ফায়ার ডায়মন্ড টপ-আপ</p>
     <p><strong>Developer:</strong> SHORIF</p>
 
     <form onsubmit="sendToWhatsApp(); return false;">
-      <input id="uid" type="text" placeholder="🔍 ফ্রি ফায়ার UID দিন" required>
+      <input
+        id="uid"
+        type="text"
+        placeholder="🔍 ফ্রি ফায়ার UID দিন"
+        required
+        maxlength="12"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,12)"
+      />
 
       <select id="package" required>
         <option value="">🎁 ডায়মন্ড প্যাকেজ সিলেক্ট করুন</option>
@@ -142,49 +147,21 @@
     </form>
 
     <div class="social-buttons">
-      <a href="https://wa.me/8801707405778" target="_blank" style="
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 0 10px #128C7E;
-  transition: background 0.3s;
-">💬 Support
-</a>
-<a href="https://www.facebook.com/profile.php?id=61568411587613" target="_blank" style="
-  display: inline-block;
-  background-color: #1877F2;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 0 10px #0e5bd8;
-  transition: background 0.3s;
-">
-  📘 Facebook
-</a>
-
-      <a href="https://www.tiktok.com/@b2kr.nana" target="_blank" style="
-  display: inline-block;
-  background-color: #000;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 0 10px #ff0050;
-  transition: background 0.3s;
-">
-  🎵 TikTok
-</a>
-
+      <a
+        class="discord"
+        href="https://discord.gg/hXHedsPjgf"
+        target="_blank"
+        >💬 Discord Server</a
+      >
+      <a
+        class="facebook"
+        href="https://www.facebook.com/profile.php?id=61568411587613"
+        target="_blank"
+        >📘 Facebook Page</a
+      >
+      <a class="tiktok" href="https://www.tiktok.com/@b2kr.nana" target="_blank"
+        >🎵 TikTok Profile</a
+      >
     </div>
   </div>
 
@@ -200,6 +177,5 @@
       window.open(url, "_blank");
     }
   </script>
-
 </body>
 </html>
