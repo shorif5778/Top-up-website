@@ -5,62 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NOOB NATION - Free Fire Top-Up</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Hind Siliguri', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      flex-direction: column;
+      padding: 20px;
     }
 
     .panel {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 30px 25px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
       border-radius: 16px;
-      width: 90%;
-      max-width: 400px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px 25px;
+      width: 100%;
+      max-width: 420px;
       box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
       text-align: center;
     }
 
     h2 {
-      color: #00ffcc;
-      margin-bottom: 5px;
+      background: linear-gradient(90deg, #00ffd5, #00bcd4, #00ffd5);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 26px;
+      font-weight: bold;
     }
 
     p {
       font-size: 14px;
       color: #ccc;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     input, select, button {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
       font-size: 16px;
     }
 
     input, select {
-      background: #1c1c1c;
+      background: rgba(255, 255, 255, 0.1);
       color: white;
     }
 
     button {
-      background: #00c853;
+      background: linear-gradient(to right, #00c853, #00e676);
       color: white;
       font-weight: bold;
       cursor: pointer;
-      transition: 0.3s;
+      transition: transform 0.3s ease;
     }
 
     button:hover {
-      background: #00b347;
+      transform: scale(1.05);
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-buttons a {
+      flex: 1;
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    .facebook {
+      background: #1877f2;
+    }
+
+    .tiktok {
+      background: #000;
+    }
+
+    .social-buttons a:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -68,33 +113,79 @@
 
   <div class="panel">
     <h2>NOOB NATION 🔥</h2>
-    <p>Free Fire Diamond Top-Up</p>
-    <p>Developer SHORIF</p>
+    <p>ফ্রি ফায়ার ডায়মন্ড টপ-আপ</p>
+    <p><strong>Developer:</strong> SHORIF</p>
+
     <form onsubmit="sendToWhatsApp(); return false;">
-      <input id="uid" type="text" placeholder="Enter Free Fire UID" required>
+      <input id="uid" type="text" placeholder="🔍 ফ্রি ফায়ার UID দিন" required>
 
       <select id="package" required>
-  <option value="">🎁 ডায়মন্ড প্যাকেজ সিলেক্ট করুন</option>
-  <option value="25 Diamond (25 Taka)">25 Diamond - 25 Taka</option>
-  <option value="50 Diamond (40 Taka)">50 Diamond - 40 Taka</option>
-  <option value="240 Diamond (160 Taka)">240 Diamond - 160 Taka</option>
-  <option value="610 Diamond (400 Taka)">610 Diamond - 400 Taka</option>
-  <option value="1240 Diamond (790 Taka)">1240 Diamond - 790 Taka</option>
-  <option value="2530 Diamond (1640 Taka)">2530 Diamond - 1640 Taka</option>
-  <option value="Weekly (160 Taka)">Weekly - 160 Taka</option>
-  <option value="Monthly (770 Taka)">Monthly - 770 Taka</option>
-  <option value="Level Up Pass (160 Taka)">Level Up Pass - 160 Taka</option>
-</select>
-
-
-      <select id="payment" required>
-        <option value="">💳 Select Payment Method</option>
-        <option value="Bkash">Bkash</option>
-        <option value="Nagad">Nagad</option>
+        <option value="">🎁 ডায়মন্ড প্যাকেজ সিলেক্ট করুন</option>
+        <option value="25 Diamond (25 Taka)">25 Diamond - ২৫ টাকা</option>
+        <option value="50 Diamond (40 Taka)">50 Diamond - ৪০ টাকা</option>
+        <option value="240 Diamond (160 Taka)">240 Diamond - ১৬০ টাকা</option>
+        <option value="610 Diamond (400 Taka)">610 Diamond - ৪০০ টাকা</option>
+        <option value="1240 Diamond (790 Taka)">1240 Diamond - ৭৯০ টাকা</option>
+        <option value="2530 Diamond (1640 Taka)">2530 Diamond - ১৬৪০ টাকা</option>
+        <option value="Weekly (160 Taka)">Weekly - ১৬০ টাকা</option>
+        <option value="Monthly (770 Taka)">Monthly - ৭৭০ টাকা</option>
+        <option value="Level Up Pass (160 Taka)">Level Up Pass - ১৬০ টাকা</option>
       </select>
 
-      <button type="submit">📲 Order via WhatsApp</button>
+      <select id="payment" required>
+        <option value="">💳 পেমেন্ট মেথড সিলেক্ট করুন</option>
+        <option value="Bkash (Only Send Money)">Bkash (Only Send Money)</option>
+        <option value="Nagad (Only Send Money)">Nagad (Only Send Money)</option>
+      </select>
+
+      <button type="submit">📲 WhatsApp এ অর্ডার দিন</button>
     </form>
+
+    <div class="social-buttons">
+      <a href="https://wa.me/8801707405778" target="_blank" style="
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 10px #128C7E;
+  transition: background 0.3s;
+">💬 Support
+</a>
+<a href="https://www.facebook.com/profile.php?id=61568411587613" target="_blank" style="
+  display: inline-block;
+  background-color: #1877F2;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 10px #0e5bd8;
+  transition: background 0.3s;
+">
+  📘 Facebook
+</a>
+
+      <a href="https://www.tiktok.com/@b2kr.nana" target="_blank" style="
+  display: inline-block;
+  background-color: #000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 10px #ff0050;
+  transition: background 0.3s;
+">
+  🎵 TikTok
+</a>
+
+    </div>
   </div>
 
   <script>
@@ -103,10 +194,9 @@
       var pack = document.getElementById("package").value;
       var pay = document.getElementById("payment").value;
 
-      var phone = "8801707405778"; // তোমার WhatsApp নম্বর
-      var message = 🔥 Free Fire Top-Up Request 🔥\n\n👤 UID: ${uid}\n💎 Package: ${pack}\n💰 Payment Method: ${pay};
-
-      var url = https://wa.me/${phone}?text=${encodeURIComponent(message)};
+      var phone = "8801707405778";
+      var message = `🔥 Free Fire Top-Up Request 🔥\n\n👤 UID: ${uid}\n💎 Package: ${pack}\n💰 Payment Method: ${pay}`;
+      var url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     }
   </script>
