@@ -13,39 +13,37 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+      height: 100vh;
     }
 
     .panel {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 40px 30px;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 0 35px rgba(0, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px 25px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
       text-align: center;
     }
 
     h2 {
       color: #00ffcc;
-      margin-bottom: 10px;
-      font-size: 32px;
+      margin-bottom: 5px;
     }
 
     p {
-      font-size: 16px;
+      font-size: 14px;
       color: #ccc;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     input, select, button {
       width: 100%;
-      padding: 16px;
-      margin: 12px 0;
-      border-radius: 10px;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
       border: none;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     input, select {
@@ -71,30 +69,31 @@
   <div class="panel">
     <h2>NOOB NATION 🔥</h2>
     <p>Free Fire Diamond Top-Up</p>
-    <p>Developer: SHORIF</p>
+    <p>Developer SHORIF</p>
     <form onsubmit="sendToWhatsApp(); return false;">
-      <input id="uid" type="text" placeholder="⚡ আপনার Free Fire UID লিখুন" required>
+      <input id="uid" type="text" placeholder="Enter Free Fire UID" required>
 
       <select id="package" required>
-        <option value="">🎁 ডায়মন্ড প্যাকেজ সিলেক্ট করুন</option>
-        <option value="25 Diamond (25 Taka)">25 Diamond - 25 Taka</option>
-        <option value="50 Diamond (40 Taka)">50 Diamond - 40 Taka</option>
-        <option value="240 Diamond (160 Taka)">240 Diamond - 160 Taka</option>
-        <option value="610 Diamond (400 Taka)">610 Diamond - 400 Taka</option>
-        <option value="1240 Diamond (790 Taka)">1240 Diamond - 790 Taka</option>
-        <option value="2530 Diamond (1640 Taka)">2530 Diamond - 1640 Taka</option>
-        <option value="Weekly (160 Taka)">Weekly - 160 Taka</option>
-        <option value="Monthly (770 Taka)">Monthly - 770 Taka</option>
-        <option value="Level Up Pass (160 Taka)">Level Up Pass - 160 Taka</option>
-      </select>
+  <option value="">🎁 ডায়মন্ড প্যাকেজ সিলেক্ট করুন</option>
+  <option value="25 Diamond (25 Taka)">25 Diamond - 25 Taka</option>
+  <option value="50 Diamond (40 Taka)">50 Diamond - 40 Taka</option>
+  <option value="240 Diamond (160 Taka)">240 Diamond - 160 Taka</option>
+  <option value="610 Diamond (400 Taka)">610 Diamond - 400 Taka</option>
+  <option value="1240 Diamond (790 Taka)">1240 Diamond - 790 Taka</option>
+  <option value="2530 Diamond (1640 Taka)">2530 Diamond - 1640 Taka</option>
+  <option value="Weekly (160 Taka)">Weekly - 160 Taka</option>
+  <option value="Monthly (770 Taka)">Monthly - 770 Taka</option>
+  <option value="Level Up Pass (160 Taka)">Level Up Pass - 160 Taka</option>
+</select>
+
 
       <select id="payment" required>
-        <option value="">💳 পেমেন্ট মেথড সিলেক্ট করুন</option>
+        <option value="">💳 Select Payment Method</option>
         <option value="Bkash">Bkash</option>
         <option value="Nagad">Nagad</option>
       </select>
 
-      <button type="submit">📲 অর্ডার পাঠান (WhatsApp)</button>
+      <button type="submit">📲 Order via WhatsApp</button>
     </form>
   </div>
 
@@ -105,9 +104,9 @@
       var pay = document.getElementById("payment").value;
 
       var phone = "8801707405778"; // তোমার WhatsApp নম্বর
-      var message = `🔥 Free Fire Top-Up Request 🔥\n\n👤 UID: ${uid}\n💎 Package: ${pack}\n💰 Payment Method: ${pay}`;
+      var message = 🔥 Free Fire Top-Up Request 🔥\n\n👤 UID: ${uid}\n💎 Package: ${pack}\n💰 Payment Method: ${pay};
 
-      var url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      var url = https://wa.me/${phone}?text=${encodeURIComponent(message)};
       window.open(url, "_blank");
     }
   </script>
